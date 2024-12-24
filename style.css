@@ -1,39 +1,54 @@
-header{
-  background: lightblue;
-  border: solid blue;
-  border-width: 10px 0px 10px 0px;
-  margin: 0 auto;
-  text-align: center;
-}
- h1{
-font-size: 3em;
+body {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.circle{
-height: 250px;
-width: 250px;
-background: blue;
-border-radius: 50%;
-border: 10px solid white;
-display: inline-block;
+header {
+  background: linear-gradient(135deg, #1181cb69, #54a23e72);
+  color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  text-shadow: black 1px 0 10px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.logo img {
+  border-radius: 50%;
+}
+nav {
+  width: 40%;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-inline: 40px;
 }
 
-h3{
-  background-color: #ce54c7;
-  padding: 15px;
-  font-size: 1.5em;
-  border-left: 10px solid #d6d5cd;
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
 }
-
-header, h3{
-color: white;
-font-family: "Arial Black", Gadget, sans-serif;
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background: rgb(245, 24, 4);
+  transition: width 0.4s ease;
 }
-
-body{
-font-family: helvetica, arial, san-serif;
-}
-p, ul {
-padding-left: 50px;
-  font-size: 1.3em;
+a:hover::after {
+  width: 100%;
 }
