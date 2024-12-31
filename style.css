@@ -1,39 +1,152 @@
-header{
-  background: lightblue;
-  border: solid blue;
-  border-width: 10px 0px 10px 0px;
-  margin: 0 auto;
+body {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: linear-gradient(135deg, #1181cb69, #54a23e72);
+  color: white;
+  position: sticky;
+  width: auto;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  text-shadow: black 1px 0 10px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.logo img {
+  border-radius: 50%;
+}
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+nav {
+  width: 40%;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-inline: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background: rgb(245, 24, 4);
+  transition: width 0.4s ease;
+}
+a:hover::after {
+  width: 100%;
+}
+#home {
+  background: linear-gradient(
+    0deg,
+    rgba(7, 189, 113, 0.836),
+    rgba(5, 145, 221, 0.462)
+  ),url("./photo.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(3, 2, 12, 0.729);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-size: 2em;
+  font-family: "sans-serif,sofia";
+  text-shadow: black;
+}
+#about{
+  margin: 70px;
+  background-color: wheat;
+  padding: 20px;
+  box-shadow: 0.5px 0.5px 10px grey;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-skills,
+  .about-me{
+    width: 50%;
+  }
+  .contactInfo{
+padding-left: 40%;
+  }
+.progression{
+  background-color: white;
+  border-radius: 5px;
+}
+.progression-bar{
+  background-color: blue;
+  height: 10px;
+}
+.skills{
+  padding: 10px;
+}
+.skill{
+  margin: 15px;
+}
+.skill-title{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about-me p{
+  font-size: 25px;
+}
+#about h3{
+font-size: larger;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#projects{
+  margin: 50px;
+  padding: 20px;
+}
+#projects h1{
+  font-size: 3em;
   text-align: center;
+  margin-top: 0;
 }
- h1{
-font-size: 3em;
+.project-row{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
+.project-card{
+  width: auto;
+  margin: 1em;
+  padding: 1em;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  box-shadow: 0 0 10px grey;
+  font-family: monospace;
+}
+h4{
+  text-align: center;
 
-.circle{
-height: 250px;
-width: 250px;
-background: blue;
-border-radius: 50%;
-border: 10px solid white;
-display: inline-block;
-}
-
-h3{
-  background-color: #ce54c7;
-  padding: 15px;
-  font-size: 1.5em;
-  border-left: 10px solid #d6d5cd;
-}
-
-header, h3{
-color: white;
-font-family: "Arial Black", Gadget, sans-serif;
-}
-
-body{
-font-family: helvetica, arial, san-serif;
-}
-p, ul {
-padding-left: 50px;
-  font-size: 1.3em;
 }
