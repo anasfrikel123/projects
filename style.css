@@ -1,0 +1,575 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #F5f5f5;
+    --text-color: #212529;
+    --header-bg-color: #333333;
+    --hover-color: #639CD9;
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding-medium);
+    align-content: center
+}
+
+
+/* Header Styles */
+header {
+    background-color: var(--header-bg-color);
+    color: #000000d8;
+    padding: var(--padding-large) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    position: relative;
+    padding: 0px 0px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    display: block;
+    padding: var(--padding-small) var(--padding-medium);
+    text-decoration: none;
+    color: #aa9292;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Menu */
+header nav ul .dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--header-bg-color);
+    top: 100%;
+    left: 0;
+    width: 200px;
+    list-style: none;
+    padding: var(--padding-small) 0;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+}
+
+header nav ul .dropdown li a {
+    display: block;
+    padding: var(--padding-small) var(--padding-medium);
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+header nav ul .dropdown li a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Menu Item Style for Comptabilité, Fiscalité, and Déclaration en ligne */
+header nav ul li.menu-item > a {
+    display: block;
+    padding: var(--padding-small) var(--padding-medium);
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect on Menu Items (Comptabilité, Fiscalité, etc.) */
+header nav ul li.menu-item:hover > a {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Show sub-menu when hovering over the main menu items */
+header nav ul li.menu-item:hover > .dropdown {
+    display: block;
+}
+
+/* Sub-Dropdown Menu */
+header nav ul li .dropdown li .dropdown {
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+header nav ul li:hover .dropdown li:hover .dropdown {
+    display: block;
+}
+
+/* Smooth transition effect between nav items */
+header nav ul li a {
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+/* Hover Transition for Sub-Menu Items */
+header nav ul li:hover > a,
+header nav ul li .dropdown li a:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+/* Main Content */
+h2 {
+    font-size: 28px;
+    color: #6c757d;
+    margin-bottom: var(--padding-medium);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: var(--padding-medium);
+    color: var(--text-color);
+}
+/* Service Boxes on Home Page */
+.services-home {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.service-box2 {
+    flex: 1 1 calc(33% - 20px); /* 3 boxes per row */
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-box2 img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-box2 h3 {
+    color: #639CD9;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-box2 p {
+    color: #6c757d;
+}
+
+/* For Mobile View */
+@media (max-width: 768px) {
+    .service-box2 {
+        flex: 1 1 100%; /* Each box takes full width on smaller screens */
+    }
+}
+
+/* Service Page Boxes */
+.services1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-medium);
+}
+
+.services1 .service-box1 {
+    background-color: #FFFFFF;
+    border: 5px solid #E0E0E0;
+    border-radius: 20px;
+    padding: var(--padding-small);
+    margin-bottom: var(--padding-large);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.services1 .service-box1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services1 .service-box1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: var(--padding-medium);
+}
+
+.services1 .service-box1 h3 {
+    color: var(--hover-color);
+    margin-bottom: var(--padding-small);
+    font-size: 22px;
+}
+
+.services1 .service-box1 p {
+    color: #6c757d;
+}
+
+
+/* Service Boxes Layout (2x2 Grid) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 20px; /* Adds space between boxes */
+    width: 100%; /* Ensures it takes full width */
+    margin-bottom: var(--padding-large);
+}
+
+/* Service Box Styling */
+.service-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    color: #639CD9;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-box p {
+    color: #6c757d;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr; /* Stacks boxes vertically on mobile */
+    }
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: var(--header-bg-color);
+    color: #ffffff;
+    padding: var(--padding-small) 0;
+    position: relative;
+    width: 100%;
+    display: flex; /* Make the footer a flex container */
+    justify-content: space-between; /* Distribute sections evenly */
+    align-items: flex-start; /* Align items at the top */
+    gap: 30px; /* Add some space between sections */
+    flex-wrap: wrap; /* Allow items to wrap if there's not enough space */
+}
+
+footer .section {
+    flex: 1; /* Allow sections to grow and fill available space */
+    min-width: 250px; /* Ensure sections are not too narrow */
+    text-align: left; /* Align the text to the left */
+}
+
+footer p {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+
+/* Style for links */
+footer a {
+    color: #ffffffc5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+/* Button Hover Effects */
+button, .btn {
+    padding: var(--padding-small) var(--padding-medium);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+button:focus, .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        background-color: var(--hover-color);
+    }
+
+    header nav ul li {
+        text-align: center;
+    }
+
+    .services .service-box {
+        margin-bottom: var(--padding-medium);
+    }
+
+    .services .service-box img {
+        width: 100%;
+    }
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(to left, var(--primary-color), #6a116a) no-repeat center/cover, url("/back.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: var(--padding-medium);
+    box-shadow: 0.5px 0.5px 10px grey;
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-small);
+    border-radius: 30px;
+}
+
+.contact-form .get-in-touch {
+    width: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-small);
+}
+
+input, textarea {
+    height: 50px;
+    width: 100%;
+    margin-block: var(--padding-small);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+button {
+    margin-top: var(--padding-large);
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: rgb(98, 0, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(145, 30, 190);
+}
+
+.get-in-touch {
+    padding: var(--padding-medium);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    line-height: 34px;
+}
+
+.contact-card h2 {
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.get-in-touch ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 6px;
+}
+
+.social-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Bibliotheque Section */
+.bibliotheque-section {
+    padding: var(--padding-medium);
+    background-color: #f9f9f9;
+}
+
+.bibliotheque-section .resources {
+    margin-top: var(--padding-medium);
+}
+
+.bibliotheque-section .resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bibliotheque-section .resources ul li {
+    margin-bottom: var(--padding-small);
+}
+
+.bibliotheque-section .resources ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.bibliotheque-section .resources ul li a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+.services-preview {
+    background-color: rgb(255, 255, 255);
+    padding: 50px 0;
+}
+
+.services-preview h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 55px;
+}
+
+.service-item {
+    width: 30%;
+    background-color: #e7e4e4;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-decoration:underline;
+}
+
+.service-item ul {
+    margin-left: 20px;
+}
+
+.service-item ul li {
+    margin-bottom: 5px;
+}
+
+.service-item a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.service-item a:hover {
+    background-color: #003366;
+}
+.hero {
+    display: flex;
+    flex-direction: column;  /* Stacks content vertically */
+    align-items: center;     /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically if necessary */
+    text-align: center;      /* Centers text */
+    height: 100vh;           /* Take full viewport height */
+}
+
+.hero img {
+    max-width: 80%;   /* Limits image width to 80% of the container width */
+    height: auto;     /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Adds some space below the image */
+}
+
+.hero h2, .hero p {
+    margin: 0;         /* Removes default margin */
+    padding: 0;        /* Removes padding */
+}
