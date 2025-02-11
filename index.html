@@ -4,27 +4,25 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>MyCV ANAS</title>
   <!DOCTYPE html>
   <html>
 
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>MyCV ANAS</title>
-  </head>
-
 <body>
   <header>
     <div class="logo">
-      <img src="/icon.jpeg" alt="logo" style="width: 50px; height: 50px" />
+      <img src="images/image.png" alt="logo" style="width: 50px; height: 50px" />
       <span>CV ANAS</span>
     </div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -35,18 +33,18 @@
     <section id="about">
       <div class="contact-skills">
         <div class="contactInfo">
-          <h1>contact Info</h1>
+          <h3>contact Info</h3>
           <div>
-            <pre><big><b>Name:</b></big>     mohamed anas</pre>
+            <pre><b>Name:</b>     mohamed anas</pre>
           </div>
           <div>
-            <pre><big><b>Profile:</b></big>   Software Engineer</pre>
+            <pre><b>Profile:</b>   Software Engineer</pre>
           </div>
           <div>
-            <pre><big><b>Email:</b></big>     elonmask@gmail.com</pre>
+            <pre><b>Email:</b>    elonmask@gmail.com</pre>
           </div>
           <div>
-            <pre><big><b>Phone:</b></big>     +212 79785618</pre>
+            <pre><b>Phone:</b>     +212 79785618</pre>
           </div>
         </div>
         <div class="skills">
@@ -87,23 +85,22 @@
       </div>
     </section>
     <section id="projects">
-      <h1>Projects</h1>
-      <h4>Here are some of my projects :</h4>
+      <h3>Projects</h3>
       <div class="project-row">
         <div class="project-card">
-          <img src="/images/project1.jpg" alt="project1" />
+          <img src="/projects/images/project1.jpg" alt="project1" width="100%" />
           <h3 class="project-title">Project 1</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
         </div>
         <div class="project-card">
-          <img src="/images/project2.jpg" alt="project1" style="width: 100%;" />
+          <img src="/projects/images/project2.jpg" alt="project1" width="100%" />
           <h3 class="project-title">Project 2</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
         </div>
         <div class="project-card">
-          <img src="/images/project3.jpg" alt="project1" style="width: 100%;" />
+          <img src="/projects/images/project3.jpg" alt="project1" style="width: 100%;" />
           <h3 class="project-title">Project 3</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
@@ -111,19 +108,19 @@
       </div>
       <div class="project-row">
         <div class="project-card">
-          <img src="/images/project4.jpg" alt="project1" style="width: 100%;" />
+          <img src="/projects/images/project4.jpg" alt="project1" width="100%" />
           <h3 class="project-title">Project 4</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
         </div>
         <div class="project-card">
-          <img src="/images/project5.png" alt="project1" style="width: 100%;" />
+          <img src="/projects/images/project5.png" alt="project1" width="100%" />
           <h3 class="project-title">Project 5</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
         </div>
         <div class="project-card">
-          <img src="/images/project6.jpg" alt="project1" style="width: 100%;" />
+          <img src="/projects/images/project6.jpg" alt="project1" style="width: 100%;" />
           <h3 class="project-title">Project 6</h3>
           <span class="project-descreption">descreption</span>
           <span class="peoject-date">12 Des 2024</span>
@@ -131,20 +128,30 @@
       </div>
     </section>
     <section id="contact">
-      <h1>Contact</h1>
       <div class="contact-card">
         <div class="contact-form">
-          <h2>Contact us</h2>
-          <form action="">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Subject" />
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+          <h3>Contact us</h3>
+          <form action="https://formspree.io/f/xnnjvkro" method="POST">
+            <label type="name" name="name">
+
+              Your name: </label>
+
+            <input type="text" name="name">
+            <label>
+              Your email: </label>
+
+            <input type="email" name="email">
+            <label>
+              Your message:</label>
+
+            <textarea name="message"></textarea>
+            <!-- your other form fields go here -->
             <button type="submit">Send</button>
           </form>
+
         </div>
         <div class="get-in-touch">
-          <h2>Get in Touch</h2>
+          <h3>Get in Touch</h3>
           <p>
             If you have any questions or would like to work together, feel free
             to contact me.
@@ -159,15 +166,28 @@
             <li><i class="fa-regular fa-envelope"></i><span> email 2 : omar.elarroud.uae.ac.ma</span></li>
           </ul>
           <div class="social-links">
-           <a><i class="fa-brands fa-github"></i></a>
-            <a><i class="fa-brands fa-linkedin"></i></a>
-            <a><i class="fa-solid fa-x"></i></a>
+
+            <a href="https://github.com/anasfrikel123/projects.git">
+              <div class="circle"><i class="fa-brands fa-github"></i></div>
+            </a>
+            <a href="https://www.linkedin.com/in/anas-frikel-yt-651092227/">
+              <div class="circle"><i class="fa-brands fa-linkedin"></i></div>
+            </a>
+            <a href="https://x.com/AnasFrikel525">
+              <div class="circle"><i class="fa-solid fa-x"></i></div>
+            </a>
           </div>
         </div>
     </section>
     </div>
 
   </main>
+  <script>
+    document.getElementById("myform").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      alert("Sent!"); // Show an alert
+    });
+  </script>
 </body>
 
 </html>
