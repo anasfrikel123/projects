@@ -4,78 +4,84 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>MyCV ANAS</title>
-  <!DOCTYPE html>
-  <html>
+  <title>Mohamed Anas | Software Engineer</title>
+</head>
 
 <body>
-  <header>
+  <header id="navbar">
     <div class="logo">
-      <img src="images/image.png" alt="logo" style="width: 50px; height: 50px" />
-      <span>CV ANAS</span>
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 7L9 4L15 7L21 4V17L15 20L9 17L3 20V7Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 4V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 7V20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#projects">projects</a></li>
+ 
       </ul>
     </nav>
+    <a href="#contact" class="contact-btn">Contact</a>
   </header>
+  
   <main>
     <section id="home">
-      <h1>I am anas</h1>
-      <h2>Software Engineer</h2>
+      <h2 class="keyword">Software Engineer</h2>
+      <p data-aos="fade-up" data-aos-delay="300">dw, futur software engineer income...</p>
     </section>
+    
     <section id="about">
       <div class="contact-skills">
-        <div class="contactInfo">
-          <h3>contact Info</h3>
+        <div class="contactInfo" data-aos="fade-right">
+          <h3>Contact Info</h3>
           <div>
-            <pre><b>Name:</b>     mohamed anas</pre>
+            <pre><b>Name:</b>     Mohamed Anas</pre>
           </div>
           <div>
             <pre><b>Profile:</b>   Software Engineer</pre>
           </div>
           <div>
-            <pre><b>Email:</b>    elonmask@gmail.com</pre>
+            <pre><b>Email:</b>    afrikel173@gmail.com</pre>
           </div>
           <div>
             <pre><b>Phone:</b>     +212 79785618</pre>
           </div>
         </div>
-        <div class="skills">
+        <div class="skills" data-aos="fade-left">
           <h3>Skills</h3>
           <div class="skill">
-            <div class="skill-title">JAVA 80%</div>
+            <div class="skill-title">JAVA <span>80%</span></div>
             <div class="progression">
-              <div class="progression-bar" style="width: 80%"></div>
+              <div class="progression-bar" style="width: 0%" data-width="80%"></div>
             </div>
           </div>
           <div class="skill">
-            <div class="skill-title">C/C++ 30%</div>
+            <div class="skill-title">C/C++ <span>30%</span></div>
             <div class="progression">
-              <div class="progression-bar" style="width: 30%"></div>
+              <div class="progression-bar" style="width: 0%" data-width="30%"></div>
             </div>
           </div>
           <div class="skill">
-            <div class="skill-title">Python 70%</div>
+            <div class="skill-title">Python <span>70%</span></div>
             <div class="progression">
-              <div class="progression-bar" style="width: 70%"></div>
+              <div class="progression-bar" style="width: 0%" data-width="70%"></div>
             </div>
           </div>
           <div class="skill">
-            <div class="skill-title">Figma 50%</div>
+            <div class="skill-title">Figma <span>50%</span></div>
             <div class="progression">
-              <div class="progression-bar" style="width: 50%"></div>
+              <div class="progression-bar" style="width: 0%" data-width="50%"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="about-me">
+      <div class="about-me" data-aos="fade-up">
         <h3>About Me</h3>
         <p>
           I am a software engineer with a passion for programming. I have
@@ -84,71 +90,64 @@
         </p>
       </div>
     </section>
+    
     <section id="projects">
-      <h3>Projects</h3>
+      <h3 data-aos="fade-up">Projects</h3>
       <div class="project-row">
-        <div class="project-card">
-          <img src="/projects/images/project1.jpg" alt="project1" width="100%" />
+        <div class="project-card" data-aos="fade-up" style="--i:1">
+          <img src="images/project1.jpg" alt="project1" width="100%" />
           <h3 class="project-title">Project 1</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the first project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
-        <div class="project-card">
-          <img src="/projects/images/project2.jpg" alt="project1" width="100%" />
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" style="--i:2">
+          <img src="images/project2.jpg" alt="project2" width="100%" />
           <h3 class="project-title">Project 2</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the second project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
-        <div class="project-card">
-          <img src="/projects/images/project3.jpg" alt="project1" style="width: 100%;" />
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" style="--i:3">
+          <img src="images/project3.jpg" alt="project3" style="width: 100%;" />
           <h3 class="project-title">Project 3</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the third project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
       </div>
       <div class="project-row">
-        <div class="project-card">
-          <img src="/projects/images/project4.jpg" alt="project1" width="100%" />
+        <div class="project-card" data-aos="fade-up" style="--i:4">
+          <img src="images/project4.jpg" alt="project4" width="100%" />
           <h3 class="project-title">Project 4</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the fourth project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
-        <div class="project-card">
-          <img src="/projects/images/project5.png" alt="project1" width="100%" />
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" style="--i:5">
+          <img src="images/project5.png" alt="project5" width="100%" />
           <h3 class="project-title">Project 5</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the fifth project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
-        <div class="project-card">
-          <img src="/projects/images/project6.jpg" alt="project1" style="width: 100%;" />
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" style="--i:6">
+          <img src="images/project6.jpg" alt="project6" style="width: 100%;" />
           <h3 class="project-title">Project 6</h3>
-          <span class="project-descreption">descreption</span>
-          <span class="peoject-date">12 Des 2024</span>
+          <span class="project-description">Description of the sixth project and the technologies used.</span>
+          <span class="project-date">12 Dec 2024</span>
         </div>
       </div>
     </section>
+    
     <section id="contact">
-      <div class="contact-card">
+      <div class="contact-card" data-aos="zoom-in">
         <div class="contact-form">
-          <h3>Contact us</h3>
-          <form action="https://formspree.io/f/xnnjvkro" method="POST">
-            <label type="name" name="name">
-
-              Your name: </label>
-
-            <input type="text" name="name">
-            <label>
-              Your email: </label>
-
-            <input type="email" name="email">
-            <label>
-              Your message:</label>
-
-            <textarea name="message"></textarea>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
+          <h3>Contact Us</h3>
+          <form action="https://formspree.io/f/xnnjvkro" method="POST" id="myform">
+            <label for="name">Your name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Your email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Your message:</label>
+            <textarea name="message" id="message" required></textarea>
+            <button type="submit">Send Message</button>
           </form>
-
         </div>
         <div class="get-in-touch">
           <h3>Get in Touch</h3>
@@ -157,37 +156,110 @@
             to contact me.
           </p>
           <ul>
-            <li> <i class="fa-solid fa-phone"></i>
-              <span>tel : +212694318290</span>
-            </li>
-
-            <li><i class="fa-solid fa-envelope"></i><span> email : omar.elarroud132gmail.com</span></li>
-
-            <li><i class="fa-regular fa-envelope"></i><span> email 2 : omar.elarroud.uae.ac.ma</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span>tel: +212694318290</span></li>
+            <li><i class="fa-solid fa-envelope"></i> <span>email: afrikel173@gmail.com</span></li>
+            <li><i class="fa-regular fa-envelope"></i> <span>email 2: afrikel22@gmail.com</span></li>
           </ul>
           <div class="social-links">
-
-            <a href="https://github.com/anasfrikel123/projects.git">
+            <a href="https://github.com/anasfrikel123/projects.git" target="_blank">
               <div class="circle"><i class="fa-brands fa-github"></i></div>
             </a>
-            <a href="https://www.linkedin.com/in/anas-frikel-yt-651092227/">
+            <a href="https://www.linkedin.com/in/anas-frikel-yt-651092227/" target="_blank">
               <div class="circle"><i class="fa-brands fa-linkedin"></i></div>
             </a>
-            <a href="https://x.com/AnasFrikel525">
+            <a href="https://x.com/AnasFrikel525" target="_blank">
               <div class="circle"><i class="fa-solid fa-x"></i></div>
             </a>
           </div>
         </div>
+      </div>
     </section>
-    </div>
-
   </main>
+  
+  <div class="scroll-top" id="scrollTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Mohamed Anas. All rights reserved.</p>
+      <div class="footer-social-links">
+        <a href="https://github.com/anasfrikel123/projects.git" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anas-frikel-yt-651092227/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/AnasFrikel525" target="_blank"><i class="fa-solid fa-x"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+
+    // Floating navbar effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Animate skill progression bars
+    function animateSkillBars() {
+      const progressBars = document.querySelectorAll('.progression-bar');
+      progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 500);
+      });
+    }
+    
+    // Form submission
     document.getElementById("myform").addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent the default form submission
-      alert("Sent!"); // Show an alert
+      alert("Message sent successfully!"); // Show an alert
+      this.reset(); // Reset the form
     });
+
+    // Run animations on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      animateSkillBars();
+    });
+
+    // Rerun animations when scrolling to about section
+    const aboutSection = document.getElementById('about');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(aboutSection);
   </script>
 </body>
-
 </html>
