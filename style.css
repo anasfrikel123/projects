@@ -53,7 +53,7 @@ body {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 24ch }
+  to { width: 17ch }
 }
 
 @keyframes blink-caret {
@@ -201,7 +201,7 @@ main {
 .keyword {
   font-size: 3em;
   font-weight: bold;
-  width: 24ch;
+  width: 17ch;
   overflow: hidden;
   border-right: 0.1em solid var(--primary-color);
   white-space: nowrap;
